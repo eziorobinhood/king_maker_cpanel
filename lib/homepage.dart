@@ -98,7 +98,7 @@ class _HomepageState extends State<Homepage> {
                           controller: upiController,
                           label: "UPI ID",
                           icon: Icons.alternate_email,
-                          hint: "mobile@upi",
+                          hint: "Enter UPI ID",
                         ),
                         const SizedBox(height: 25),
                         _buildGlassInput(

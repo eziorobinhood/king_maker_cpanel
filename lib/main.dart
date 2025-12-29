@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:king_maker_cpanel/homepage.dart';
+import 'package:king_maker_cpanel/welcomepage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
       ),
-      home: const Homepage(),
+      home: const WelcomeHub(),
     );
   }
 }

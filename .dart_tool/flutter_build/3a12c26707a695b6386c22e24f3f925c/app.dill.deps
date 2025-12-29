@@ -1003,8 +1003,12 @@ file:///C:/flutter/packages/flutter/lib/widgets.dart
 file:///D:/PROJECTS/king_maker_cpanel/.dart_tool/flutter_build/3a12c26707a695b6386c22e24f3f925c/main.dart
 file:///D:/PROJECTS/king_maker_cpanel/.dart_tool/flutter_build/3a12c26707a695b6386c22e24f3f925c/web_plugin_registrant.dart
 file:///D:/PROJECTS/king_maker_cpanel/.dart_tool/package_config.json
+file:///D:/PROJECTS/king_maker_cpanel/lib/allinformation.dart
+file:///D:/PROJECTS/king_maker_cpanel/lib/allusers.dart
+file:///D:/PROJECTS/king_maker_cpanel/lib/createuser.dart
 file:///D:/PROJECTS/king_maker_cpanel/lib/homepage.dart
 file:///D:/PROJECTS/king_maker_cpanel/lib/main.dart
+file:///D:/PROJECTS/king_maker_cpanel/lib/welcomepage.dart
 org-dartlang-sdk:///dart-sdk/lib/_http/crypto.dart
 org-dartlang-sdk:///dart-sdk/lib/_http/embedder_config.dart
 org-dartlang-sdk:///dart-sdk/lib/_http/http.dart
