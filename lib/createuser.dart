@@ -415,7 +415,7 @@ class _CreateNewUserState extends State<CreateNewUser> {
           'occupation': occupation,
           'gender': gender,
           'upi_id': upi,
-          "given_referral_id": referralId,
+          "given_referral_code": referralId,
         }),
       );
 
