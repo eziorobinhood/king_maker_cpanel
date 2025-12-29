@@ -253,7 +253,7 @@ Future<void> sendPaymentData(
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text("Failed: Server returned ${response.statusCode}"),
+          content: Text("Enter Valid Data"),
           backgroundColor: Colors.red,
         ),
       );
@@ -263,6 +263,6 @@ Future<void> sendPaymentData(
     if (!context.mounted) return;
     ScaffoldMessenger.of(
       context,
-    ).showSnackBar(SnackBar(content: Text("Network error: $e")));
+    ).showSnackBar(SnackBar(content: Text("Network error")));
   }
 }

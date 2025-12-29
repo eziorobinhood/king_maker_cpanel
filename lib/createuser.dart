@@ -422,25 +422,24 @@ class _CreateNewUserState extends State<CreateNewUser> {
       if (response.statusCode == 200) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
-            content: Text("Payment data sent successfully!"),
+            content: Text("User Created Successfully!"),
             backgroundColor: Colors.green,
           ),
         );
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text("Failed: Server returned ${response.statusCode}"),
+            content: Text("Enter Valid Data"),
             backgroundColor: Colors.red,
           ),
         );
-        print(response.body);
       }
     } catch (e) {
       // Handle no internet or server down
       if (!context.mounted) return;
       ScaffoldMessenger.of(
         context,
-      ).showSnackBar(SnackBar(content: Text("Network error: $e")));
+      ).showSnackBar(SnackBar(content: Text("Network error")));
     }
   }
 }
