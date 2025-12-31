@@ -96,9 +96,9 @@ class _HomepageState extends State<Homepage> {
                       children: [
                         _buildGlassInput(
                           controller: upiController,
-                          label: "UPI ID",
+                          label: "UPI ID/Mobile Number",
                           icon: Icons.alternate_email,
-                          hint: "Enter UPI ID",
+                          hint: "Enter UPI ID or Mobile Number",
                         ),
                         const SizedBox(height: 25),
                         _buildGlassInput(
@@ -238,7 +238,11 @@ Future<void> sendPaymentData(
       headers: {
         'Content-Type': 'application/json', // Tell Vercel you are sending JSON
       },
-      body: jsonEncode({'upi_id': upi, 'investedamount': amount}),
+      body: jsonEncode({
+        'upi_id': upi,
+        'phnumber': upi,
+        'investedamount': amount,
+      }),
     );
 
     if (!context.mounted) return;

@@ -18,6 +18,7 @@ class _CreateNewUserState extends State<CreateNewUser> {
   final TextEditingController dateofbirthController = TextEditingController();
   final TextEditingController referralIdController = TextEditingController();
   final TextEditingController occupationController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
   // 1. Variable to hold the selection
   String? selectedGender;
 
@@ -167,6 +168,14 @@ class _CreateNewUserState extends State<CreateNewUser> {
                           hint: "Enter name",
                         ),
                         const SizedBox(height: 25),
+
+                        _buildGlassInput(
+                          controller: passwordController,
+                          label: "Password",
+                          icon: Icons.alternate_email,
+                          hint: "Enter Password",
+                        ),
+                        const SizedBox(height: 25),
                         _buildGlassInput(
                           controller: dateofbirthController,
                           label: "Date of Birth",
@@ -235,6 +244,7 @@ class _CreateNewUserState extends State<CreateNewUser> {
                                         context,
                                         phoneController.text,
                                         nameController.text,
+                                        passwordController.text,
                                         dateofbirthController.text,
                                         selectedGender!,
                                         occupationController.text,
@@ -393,6 +403,7 @@ class _CreateNewUserState extends State<CreateNewUser> {
   Future<void> createUser(
     BuildContext context,
     String phone,
+    String password,
     String name,
     String dob,
     String occupation,
@@ -411,6 +422,7 @@ class _CreateNewUserState extends State<CreateNewUser> {
         body: jsonEncode({
           'phnumber': phone,
           'name': name,
+          'password': password,
           'dateofbirth': dob,
           'occupation': occupation,
           'gender': gender,
@@ -419,7 +431,7 @@ class _CreateNewUserState extends State<CreateNewUser> {
         }),
       );
 
-      if (response.statusCode == 200) {
+      if (response.statusCode == 201) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             content: Text("User Created Successfully!"),
@@ -433,6 +445,7 @@ class _CreateNewUserState extends State<CreateNewUser> {
             backgroundColor: Colors.red,
           ),
         );
+        print(response.body);
       }
     } catch (e) {
       // Handle no internet or server down
